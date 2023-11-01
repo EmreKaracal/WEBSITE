@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="ferrari.css" rel="stylesheet" type="text/css"/>
+    <title>EK MOTORS</title>
+    <script src="scripts/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+     <!--HEADER-->
+     <div id="header" class="sections">
+        <a href="#" id="ekmotors">EK MOTORS</a>
+        <div id="nav">
+            <a href="main.html">HOMEPAGE</a>
+            <a href="ferrari.html">FERRARI</a>
+            <a href="lamborghini.html">LAMBORGHINI</a>
+            <a href="mclaren.html">MCLAREN</a>
+            <a href="astonmartin.html">ASTON MARTIN</a>
+        </div>
+    </div>
+   
+    <div id="menu">
+        <div id="leftPanel">
+            <h1>ASTON MARTIN </h1>
+            <h2><span class="bold">DB11</span></h2>
+            <div class="detail" id="detail1">
+                <p>ENGINE:   5,204 cc (5.2 L)</p>
+                <p>HORSE POWER: (447 kW; 600 hp)</p>
+                <p>0 TO 100 KM :  3.8 seconds</p>
+                <p>TOP SPEED : 309 km/h (192 mph) </p>
+            </div>
+            <div id="detail2">
+                <p>
+                    Established in 2022, EK MOTORS brings you, our valued customers, the car of your dreams.
+                     Getting your dream car is just a phone call away. If you want, you can fill out our form on the right so that we can reach you...
+                </p>
+            </div>
+            
+        </div>
+        <div id="rightPanel">
+        <img  width="500px" src="images/aston martin exterior.jpg" alt="">
+        <button id="btn"> CHANGE PICTURE</button>
+     </div>
+        
+    </div>
+    <script>
+        $(function(){
+            $('#btn').on('click',function(){
+                $('img').attr('src','images/aston martin interior.jpg');
+            });
+        
+           
+
+        });
+</script>
+    
+    
+    
+    
+</body>
+</html>

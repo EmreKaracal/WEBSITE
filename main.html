@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="main.css" rel="stylesheet" type="text/css"/>
+   
+    <title>Document</title>
+    <style>
+            div.moreinfo {
+            width: 210px;
+            background-color: orange;
+            border: 1px solid black;
+            border-radius: 10px;
+            margin: 5px;
+            text-align: center;
+            }
+            div#effect {
+             margin: 10px;
+             }
+             
+
+           
+    </style>
+</head>
+<body>
+     <!--HEADER-->
+     <div id="header" class="sections">
+        <a href="#" id="ekmotors">EK MOTORS</a>
+        <div id="nav">
+            <a href="main.html">HOMEPAGE</a>
+            <a href="ferrari.html">FERRARI</a>
+            <a href="lamborghini.html">LAMBORGHINI</a>
+            <a href="mclaren.html">MCLAREN</a>
+            <a href="astonmartin.html">ASTON MARTIN</a>
+        </div>
+    </div>
+     
+    <!--BANNER-->
+    <div id="menu"></div>
+
+    
+    <!--LEFT PANEL-->
+    <div id="leftPanel">
+        <h1>ABOUT US</h1>
+        <h2><span class="bold">SINCE 2022</span></h2>
+        <div class="detail" id="detail1">
+            <p>
+                EK MOTORS is a vehicle company that is the distributor of
+                 many world famous car brands.<span class="imp">(Ferrari , Aston Martin, Mclaren, Lamborghini)</span>
+            </p>
+        </div>
+        <div id="detail2">
+            <p>
+                Established in 2022, EK MOTORS brings you, our valued customers, the car of your dreams.
+                 Getting your dream car is just a phone call away. If you want, you can fill out our form on the right so that we can reach you...
+            </p>
+        </div>
+        
+    </div>
+    
+    <!--RIGHT PANEL-->
+    <div id="rightPanel">
+        <h4>Just fill our form for your requests and questions</h4>
+        <form name="myForm">
+            <table>
+                <tr>
+                    <td colspan="6">
+                        <h1>REQUEST FORM</h1>
+                    </td>
+                </tr>
+    
+                <tr>
+                    <td class="label">Brand:</td>
+                    <td>
+                        <select id="status">
+                            <option value="0">Ferrari</option>
+                            <option value="1">Lamborghini</option>
+                            <option value="2">Mclaren</option>
+                            <option value="3">Aston Martin</option>
+                        </select>
+                    </td>
+                    <td class="label">Contact phone number: </td>
+                    <td>
+                        <input type="text" id="children" value="" size="10">
+                    </td>
+                    
+                </tr>
+                <tr><!-- WIDGET (DATE PCIKER)-->
+                    <td colspan="7">
+                        <p>Choose Appointment Date <input type="date" id="datepicker" placeholder="Choose date"></p>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td colspan="7">
+                        <textarea id="panel" cols="70" rows="7"></textarea>
+                    </td>
+                </tr>
+            </table>
+    
+        </form>
+      
+        <a id="contact" href="#">CONTACT US</a>
+    </div>
+    <script src="scripts/jquery-3.6.0.min.js"></script>
+   
+</body>
+</html>
+<script>
+     $(function () {
+    $("#applySlideDownEffect").click(function () {
+      $("#deta<il1").slideDown("slow", function () {
+       
+      });
+    });
+    $("#applySlideUpEffect").click(function () {
+      $("#detail2").slideUp("slow", function () {
+      });
+    });
+    /*WIDGET (DATE PICKER) ((IT IS NOT WORKING I DID NOT UNDERSTAND WHY */
+    $("#datepick").click(function(){
+        $("#datepicker").datepicker();
+        
+    });
+
+  })
+    // Get a reference to the button element
+    var showMessageButton = document.getElementById('contact');
+
+    // Add an event listener to the button
+    showMessageButton.addEventListener('click', function() {
+    // Create a div element for the message box
+    var messageBox = document.createElement('div');
+    messageBox.innerHTML = 'Your form has been sent! we will contact you as soon as possible ';
+    
+    // Style the message box (you can customize this as needed)
+    messageBox.style.backgroundColor = 'red';
+    messageBox.style.border = '1px solid #000';
+    messageBox.style.padding = '10px';
+    messageBox.style.position = 'fixed';
+    messageBox.style.top = '50%';
+    messageBox.style.left = '50%';
+    messageBox.style.transform = 'translate(-50%, -50%)';
+    messageBox.style.zIndex = '9999';
+
+    // Append the message box to the body
+    document.body.appendChild(messageBox);
+    
+    // Add a close button to the message box
+    var closeButton = document.createElement('button');
+    closeButton.innerHTML = 'Close';
+    closeButton.addEventListener('click', function() {
+        // Remove the message box when the close button is clicked
+        document.body.removeChild(messageBox);
+    });
+    messageBox.appendChild(closeButton);
+});
+
+  </script>

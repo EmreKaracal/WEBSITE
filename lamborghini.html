@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="ferrari.css" rel="stylesheet" type="text/css"/>
+    <title>EK MOTORS</title>
+    <script src="scripts/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+     <!--HEADER-->
+     <div id="header" class="sections">
+        <a href="#" id="ekmotors">EK MOTORS</a>
+        <div id="nav">
+            <a href="main.html">HOMEPAGE</a>
+            <a href="ferrari.html">FERRARI</a>
+            <a href="lamborghini.html">LAMBORGHINI</a>
+            <a href="mclaren.html">MCLAREN</a>
+            <a href="astonmartin.html">ASTON MARTIN</a>
+        </div>
+    </div>
+   
+    <div id="menu">
+        <div id="leftPanel">
+            <h1>LAMBORGHINI </h1>
+            <h2><span class="bold">AVENTADOR SVJ</span></h2>
+            <div class="detail" id="detail1">
+                <p>ENGINE:  6,498 cc(6.5 L)</p>
+                <p>HORSE POWER: (515 kW; 690 hp)</p>
+                <p>0 TO 100 KM :  2.9 seconds.</p>
+                <p>TOP SPEED :  350 km/h (217 mph) </p>
+            </div>
+            <div id="detail2">
+                <p>
+                    Established in 2022, EK MOTORS brings you, our valued customers, the car of your dreams.
+                     Getting your dream car is just a phone call away. If you want, you can fill out our form on the right so that we can reach you...
+                </p>
+            </div>
+            
+        </div>
+        <img  width="500px" src="images/lamborghini exterior.jpg" alt="">
+        <script>
+                $(function(){
+                    $('#btn').on('click',function(){
+                        $('img').attr('src','images/lamborghini interior.jpg');
+                    });
+                   
+
+                });
+        </script>
+        <br>
+        <br>
+        <button id="btn"> CHANGE PICTURE</button>
+     
+        
+    </div>
+    
+    
+    
+    
+</body>
+</html>
